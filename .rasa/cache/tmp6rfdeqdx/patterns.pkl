@@ -1,0 +1,18 @@
+[
+  {
+    "name": "turn_signal_direction",
+    "pattern": "left"
+  },
+  {
+    "name": "turn_signal_direction",
+    "pattern": "left side"
+  },
+  {
+    "name": "turn_signal_direction",
+    "pattern": "right"
+  },
+  {
+    "name": "turn_signal_direction",
+    "pattern": "right side"
+  }
+]
