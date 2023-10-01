@@ -1,57 +1,187 @@
 version: "3.1"
 
 nlu:
-- intent: turnSignalOn
-  examples: |
-    - Turn on the [left](turn_signal_direction) turn signal
-    - Activate the [right](turn_signal_direction) turn signal
-    - Switch on the [left](turn_signal_direction) turn signal
-    - Can you please turn on the [right](turn_signal_direction) turn signal?
-    - Please activate the [left](turn_signal_direction) turn signal
-    - I want to turn on the [right](turn_signal_direction) turn signal
-    - Could you switch on the [left](turn_signal_direction) turn signal?
-    - Set the [right](turn_signal_direction) turn signal to on
-    - Put on the [left](turn_signal_direction) turn signal
-
-- intent: turnSignalOff
-  examples: |
-    - Turn off the [left](turn_signal_direction) turn signal
-    - Deactivate the [right](turn_signal_direction) turn signal
-    - Switch off the [left](turn_signal_direction) turn signal
-    - Can you please turn off the [right](turn_signal_direction) turn signal?
-    - Please deactivate the [left](turn_signal_direction) turn signal
-    - I want to turn off the [right](turn_signal_direction) turn signal
-    - Could you switch off the [left](turn_signal_direction) turn signal?
-    - Set the [right](turn_signal_direction) turn signal to off
-    - Take off the [left](turn_signal_direction) turn signal
-
-- regex: turn_signal_direction
-  examples: |
-    - left
-    - left side
-    - right
-    - right side
-
-
-- intent: hvacTemperature
+- intent: HVACTemperature
   examples: |
     - "[increase](hvac_temperature_action) the temperature [two](numeric_value) degrees celsius"
     - "[decrease](hvac_temperature_action) the temperature [twenty five](numeric_value) degrees"
-    - Can you please [adjust](hvac_temperature_action) the temperature [fourty](numeric_value) degrees
-    - Please [set](hvac_temperature_action) the temperature [ninety](numeric_value) degrees celsius
-    - I want to [increase](hvac_temperature_action) the temperature [hundred](numeric_value) degrees
-    - Could you [decrease](hvac_temperature_action) the temperature [half](numeric_value) degrees celsius
+    - can you please [adjust](hvac_temperature_action) the temperature [to](to_or_by) [fourty](numeric_value) degrees
+    - please [set](hvac_temperature_action) the temperature [to](to_or_by) [ninety](numeric_value) degrees celsius
+    - i want [to](to_or_by) [increase](hvac_temperature_action) the temperature [to](to_or_by) [hundred](numeric_value) degrees
+    - could you [decrease](hvac_temperature_action) the temperature [to](to_or_by) [half](numeric_value) degrees celsius
+    - "[raise](hvac_temperature_action) the room temperature [by](to_or_by) [five](numeric_value) degrees celsius"
+    - its getting cold lets [boost](hvac_temperature_action) the temperature [by](to_or_by) [ten](numeric_value) degrees
+    - turn up the [heat](hvac_temperature_action) [to](to_or_by) [eighty](numeric_value) degrees fahrenheit
+    - make it warmer [by](to_or_by) [fifteen](numeric_value) degrees celsius
+    - "[lower](hvac_temperature_action) the temperature"
+    - decrease the cars [heat](hvac_temperature_action) [to](to_or_by) [sixty](numeric_value) degrees fahrenheit
+    - its too hot can we [reduce](hvac_temperature_action) the temperature [to](to_or_by) [twenty](numeric_value) degrees celsius
+    - "[adjust](hvac_temperature_action) the cars temperature [to](to_or_by) [seventy](numeric_value) degrees fahrenheit"
+    - lets [cool](hvac_temperature_action) down the place [by](to_or_by) [five](numeric_value) degrees
+    - "[increase](hvac_temperature_action) the cars warmth [to](to_or_by) [ninety](numeric_value) degrees"
+    - can you [lower](hvac_temperature_action) the temperature a bit, maybe [by](to_or_by) [five](numeric_value) degrees
+    - make it a bit [warmer](hvac_temperature_action) [by](to_or_by) [ten](numeric_value) degrees celsius please
+    - "[set](hvac_temperature_action) the thermostat [to](to_or_by) [sixty](numeric_value) degrees fahrenheit"
+    - could you [raise](hvac_temperature_action) the cars temperature [by](to_or_by) [fifteen](numeric_value) degrees
+    - "[increase](hvac_temperature_action) the temperature [by](to_or_by) [two](numeric_value) degrees celsius"
+    - "[decrease](hvac_temperature_action) the temperature [to](to_or_by) [twenty five](numeric_value) degrees"
+    - "[adjust](hvac_temperature_action) the temperature [to](to_or_by) [forty](numeric_value) degrees celsius"
+    - "[set](hvac_temperature_action) the temperature [to](to_or_by) [ninety](numeric_value) degrees fahrenheit"
+    - "[increase](hvac_temperature_action) the temperature [to](to_or_by) [hundred](numeric_value) degrees"
+    - "[decrease](hvac_temperature_action) the temperature [to](to_or_by) [half](numeric_value) degrees celsius"
+    - "[raise](hvac_temperature_action) the temperature [by](to_or_by) [five](numeric_value) degrees"
+    - "[lower](hvac_temperature_action) the temperature [to](to_or_by) [sixty](numeric_value) degrees fahrenheit"
+    - "[reduce](hvac_temperature_action) the temperature [to](to_or_by) [twenty](numeric_value) degrees celsius"
+    - "[set](hvac_temperature_action) the thermostat [to](to_or_by) [sixty](numeric_value) degrees fahrenheit"
+
 
 - regex: hvac_temperature_action
   examples: |
     - increase
+    - up
+    - boost
+    - boosting
+    - raise
+    - heat
+    - warm
+    - warmer
     - decrease
+    - down
+    - reduce
+    - back
+    - lower
+    - cool
+    - colder
     - set
-    - change
     - adjust
+    - change
+
+
+- intent: HVACFanSpeed
+  examples: |
+    - "[increase](hvac_fan_speed_action) the fan speed [two](numeric_value) percent"
+    - "[decrease](hvac_fan_speed_action) the fan speed [twenty five](numeric_value)"
+    - can you please [adjust](hvac_fan_speed_action) the fan speed [hundred](numeric_value) percent
+    - please [set](hvac_fan_speed_action) the fan speed [half](numeric_value)
+    - i want [to](to_or_by) [increase](hvac_fan_speed_action) the fan speed [fifty](numeric_value) percent
+    - could you [decrease](hvac_fan_speed_action) the fan speed [seventy five](numeric_value) percent
+    - "[set](hvac_fan_speed_action) the fan speed [hundred](numeric_value) percent"
+    - i would like [to](to_or_by) [boost](hvac_fan_speed_action) the airflow.
+    - hey can you [up](hvac_fan_speed_action) the fan intensity a bit
+    - lets crank [up](hvac_fan_speed_action) the ventilation.
+    - could you help me [raise](hvac_fan_speed_action) the fan power
+    - time [to](to_or_by) amp [up](hvac_fan_speed_action) the blower speed
+    - i need more air circulation please ramp [up](hvac_fan_speed_action) the fan
+    - its warm in here lets kick it [up](hvac_fan_speed_action) a notch
+    - how about we jack [up](hvac_fan_speed_action) the fan performance
+    - please bump [up](hvac_fan_speed_action) the fan speed a bit
+    - lets hike [up](hvac_fan_speed_action) the fans power
+    - i am feeling stuffy can we [boost](hvac_fan_speed_action) it a little
+    - time [to](to_or_by) step [up](hvac_fan_speed_action) the fan speed
+    - hey i need more breeze turn it [up](hvac_fan_speed_action) a bit
+    - i want more cooling please amp it [up](hvac_fan_speed_action)
+    - how about [boosting](hvac_fan_speed_action) the fans intensity a tad
+    - its getting stifling [raise](hvac_fan_speed_action) it up please
+    - i would love a stronger fan can you crank it [up](hvac_fan_speed_action)
+    - lets [increase](hvac_fan_speed_action) it a little for better airflow
+    - i want [to](to_or_by) [set](hvac_fan_speed_action) the fan speed at [halfway](numeric_value)
+    - can you please [lower](hvac_fan_speed_action) the fan speed a bit
+    - hey its a bit too breezy can you [reduce](hvac_fan_speed_action) the fan speed
+    - lets dial [down](hvac_fan_speed_action) the fan intensity
+    - could you help me [decrease](hvac_fan_speed_action) the fan power
+    - time [to](to_or_by) scale [back](hvac_fan_speed_action) the blower speed
+    - i need less air circulation please slow [down](hvac_fan_speed_action) the fan
+    - its getting chilly lets [lower](hvac_fan_speed_action) it a notch
+    - how about we tone it [down](hvac_fan_speed_action) on the fan performance
+    - please [reduce](hvac_fan_speed_action) the fan speed a bit
+    - lets [decrease](hvac_fan_speed_action) the fans power for a moment
+    - i would like [to](to_or_by) [boost](hvac_fan_speed_action) the fan speed [by](to_or_by) [fifteen](numeric_value)
+    - hey can you [increase](hvac_fan_speed_action) the fan speed [to](to_or_by) [eighty](numeric_value) percent
+    - please amp [up](hvac_fan_speed_action) the fan speed [to](to_or_by) [ninety](numeric_value) percent
+    - can you [reduce](hvac_fan_speed_action) the fan speed [to](to_or_by) [half](numeric_value)
+    - i would like [to](to_or_by) [lower](hvac_fan_speed_action) the fan speed [by](to_or_by) [twenty](numeric_value) percent
+    - hey its too breezy can you [decrease](hvac_fan_speed_action) the fan speed [to](to_or_by) [forty](numeric_value) percent
+    - lets dial [down](hvac_fan_speed_action) the fan speed [to](to_or_by) [five](numeric_value)
+    - please slow [down](hvac_fan_speed_action) the fan speed [to](to_or_by) [thirty](numeric_value) percent
+
+
+- regex: hvac_fan_speed_action
+  examples: |
+    - increase
+    - up
+    - boost
+    - boosting
+    - raise
+    - decrease
+    - down
+    - reduce
+    - back
+    - lower
+    - set
+    - adjust
+    - change
+
+
+- intent: VolumeControl
+  examples: |
+    - "[increase](volume_control_action) the volume"
+    - "[increase](volume_control_action) the volume [by](to_or_by) [twenty five](numeric_value) percent"
+    - turn the volume [up](volume_control_action) a bit
+    - "[raise](volume_control_action) the sound"
+    - "[raise](volume_control_action) the sound [to](to_or_by) [maximum](numeric_value)"
+    - can you please crank [up](volume_control_action) the volume
+    - please [set](volume_control_action) the volume [to](to_or_by) [maximum](numeric_value)
+    - i want the volume [louder](volume_control_action)
+    - could you [raise](volume_control_action) the sound a bit
+    - "[lower](volume_control_action) the volume"
+    - make it a little [quieter](volume_control_action)
+    - turn the volume [down](volume_control_action) please
+    - "[reduce](volume_control_action) the sound"
+    - can you please [decrease](volume_control_action) the volume
+    - please [set](volume_control_action) the volume [to](to_or_by) [minimum](numeric_value)
+    - i want it a bit [quieter](volume_control_action)
+    - could you [lower](volume_control_action) the sound a bit
+    - "[set](volume_control_action) the volume [to](to_or_by) [fifty](numeric_value)"
+    - "[adjust](volume_control_action) the volume [to](to_or_by) [seventy](numeric_value) percent"
+    - "[increase](volume_control_action) the sound [to](to_or_by) [eighty](numeric_value) percent"
+    - "[decrease](volume_control_action) the volume [to](to_or_by) [thirty](numeric_value)"
+    - turn the volume [up](volume_control_action) [to](to_or_by) [ninety](numeric_value)
+    - make it a tad [louder](volume_control_action)
+    - can you [raise](volume_control_action) the volume up a notch
+    - please [set](volume_control_action) the sound [to](to_or_by) [maximum](numeric_value) level
+    - "[lower](volume_control_action) the volume a little"
+    - could you make it [quieter](volume_control_action) [by](to_or_by) [ten](numeric_value) percent
+    - turn the volume [down](volume_control_action) just a touch
+    - i would like [to](to_or_by) [increase](volume_control_action) the sound [to](to_or_by) [fifty](numeric_value) percent
+    - "[raise](volume_control_action) the volume a bit more"
+    - can you please [decrease](volume_control_action) the sound slightly
+
+
+- regex: volume_control_action
+  examples: |
+    - increase
+    - up
+    - raise
+    - louder
+    - decrease
+    - lower
+    - down
+    - quieter
+    - reduce
+    - set
+    - adjust
+    - change
+
+
+- lookup: to_or_by
+  examples: |
+    - to
+    - by
+
 
 - lookup: numeric_value
   examples: |
+    - zero
     - one
     - two
     - three
@@ -101,121 +231,73 @@ nlu:
     - fourty seven
     - fourty eight
     - fourty nine
-    - fifty
-    - sixty
-    - seventy
-    - seventy five
-    - eighty
-    - ninety
-    - hundred
+    - forty
+    - forty one
+    - forty two
+    - forty three
+    - forty four
+    - forty five
+    - forty six
+    - forty seven
+    - forty eight
+    - forty nine
     - halfway
     - half
-    - three quarters
+    - fifty
+    - fifty one
+    - fifty two
+    - fifty three
+    - fifty four
+    - fifty five
+    - fifty six
+    - fifty seven
+    - fifty eight
+    - fifty nine
+    - sixty
+    - sixty one
+    - sixty two
+    - sixty three
+    - sixty four
+    - sixty five
+    - sixty six
+    - sixty seven
+    - sixty eight
+    - sixty nine
+    - seventy
+    - seventy one
+    - seventy two
+    - seventy three
+    - seventy four
+    - seventy five
+    - seventy six
+    - seventy seven
+    - seventy eight
+    - seventy nine
+    - eighty
+    - eighty one
+    - eighty two
+    - eighty three
+    - eighty four
+    - eighty five
+    - eighty six
+    - eighty seven
+    - eighty eight
+    - eighty nine
+    - ninety
+    - ninety one
+    - ninety two
+    - ninety three
+    - ninety four
+    - ninety five
+    - ninety six
+    - ninety seven
+    - ninety eight
+    - ninety nine
+    - hundred
+    - one hundred
     - fully
     - completely
     - all the way
     - max
-
-- intent: hvacFanSpeed
-  examples: |
-    - "[increase](hvac_fan_speed_action) the fan speed [two](numeric_value) percent"
-    - "[decrease](hvac_fan_speed_action) the fan speed [twenty five](numeric_value)"
-    - Can you please [adjust](hvac_fan_speed_action) the fan speed [hundred](numeric_value) percent
-    - Please [set](hvac_fan_speed_action) the fan speed [half](numeric_value)
-    - I want to [increase](hvac_fan_speed_action) the fan speed [fifty](numeric_value) percent
-    - Could you [decrease](hvac_fan_speed_action) the fan speed [seventy five](numeric_value) percent
-    - "[set](hvac_fan_speed_action) the fan speed [hundred](numeric_value) percent"
-
-- regex: hvac_fan_speed_action
-  examples: |
-    - increase
-    - decrease
-    - set
-    - change
-    - adjust
-  
-- intent: mediaPlayer
-  examples: |
-    - "[play](media_player_action) the media player"
-    - "[pause](media_player_action) the music"
-    - Can you please [resume](media_player_action) the media player
-    - Please [stop](media_player_action) the music
-    - I want to [start](media_player_action) the media player
-    - Could you [pause](media_player_action) the music
-    - "[start](media_player_action) the [next](media_player_value) song"
-    - skip to the [previous](media_player_value) track
-    - go back to the [next](media_player_value) track
-
-- regex: media_player_action
-  examples: |
-    - play
-    - start
-    - resume
-    - pause
-    - stop
-
-- regex: media_player_value
-  examples: |
-    - next
-    - previous
-
-- intent: navigation
-  examples: |
-    - "[start](navigation_action) navigation to [mcdonalds](navigation_destination, street five)"
-    - "[stop](navigation_action) navigation from [mayfair block](navigation_origin, street five) to [home](navigation_destination)"
-    - Can you please [resume](navigation_action) the navigation
-    - Please [end](navigation_action) navigation
-    - I want to [begin](navigation_action) navigation
-    - Could you [cancel](navigation_action) navigation
-    - navigate to [school](navigation_destination)
-    - direct me to [work](navigation_destination)
-    - take me to [home](navigation_destination)
-    - navigate from [work] to [home](navigation_destination)
-    - route me from [home] to [school](navigation_destination)
-    - plan a trip from [school] to [work](navigation_destination)
-    - "[start](navigation_action) navigation"
-
-- regex: navigation_action
-  examples: |
-    - start
-    - begin
-    - resume
-    - stop
-    - end
-    - cancel
-
-- regex: navigation_origin
-  examples: |
-    - home
-    - my home
-    - my house
-    - my place
-    - work
-    - my work
-    - my office
-    - my workplace
-    - my job
-    - school
-    - my school
-    - my university
-    - my college
-    - my campus
-    - street abc, city xyz, country 123
-
-- regex: navigation_destination
-  examples: |
-    - home
-    - my home
-    - my house
-    - my place
-    - work
-    - my work
-    - my office
-    - my workplace
-    - my job
-    - school
-    - my school
-    - my university
-    - my college
-    - my campus
-    - street def, city hij, country 456
+    - maximum
+    
