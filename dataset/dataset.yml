@@ -5,7 +5,7 @@ nlu:
   examples: |
     - "[increase](hvac_temperature_action) the temperature [two](numeric_value) degrees celsius"
     - "[decrease](hvac_temperature_action) the temperature [twenty five](numeric_value) degrees"
-    - can you please [adjust](hvac_temperature_action) the temperature [to](to_or_by) [fourty](numeric_value) degrees
+    - can you please [adjust](hvac_temperature_action) the temperature [to](to_or_by) [fourty seven](numeric_value) degrees
     - please [set](hvac_temperature_action) the temperature [to](to_or_by) [ninety](numeric_value) degrees celsius
     - i want [to](to_or_by) [increase](hvac_temperature_action) the temperature [to](to_or_by) [hundred](numeric_value) degrees
     - could you [decrease](hvac_temperature_action) the temperature [to](to_or_by) [half](numeric_value) degrees celsius
@@ -16,7 +16,7 @@ nlu:
     - "[lower](hvac_temperature_action) the temperature"
     - decrease the cars [heat](hvac_temperature_action) [to](to_or_by) [sixty](numeric_value) degrees fahrenheit
     - its too hot can we [reduce](hvac_temperature_action) the temperature [to](to_or_by) [twenty](numeric_value) degrees celsius
-    - "[adjust](hvac_temperature_action) the cars temperature [to](to_or_by) [seventy](numeric_value) degrees fahrenheit"
+    - "[adjust](hvac_temperature_action) the cars temperature [to](to_or_by) [seventy four](numeric_value) degrees fahrenheit"
     - lets [cool](hvac_temperature_action) down the place [by](to_or_by) [five](numeric_value) degrees
     - "[increase](hvac_temperature_action) the cars warmth [to](to_or_by) [ninety](numeric_value) degrees"
     - can you [lower](hvac_temperature_action) the temperature a bit, maybe [by](to_or_by) [five](numeric_value) degrees
@@ -30,9 +30,9 @@ nlu:
     - "[increase](hvac_temperature_action) the temperature [to](to_or_by) [hundred](numeric_value) degrees"
     - "[decrease](hvac_temperature_action) the temperature [to](to_or_by) [half](numeric_value) degrees celsius"
     - "[raise](hvac_temperature_action) the temperature [by](to_or_by) [five](numeric_value) degrees"
-    - "[lower](hvac_temperature_action) the temperature [to](to_or_by) [sixty](numeric_value) degrees fahrenheit"
-    - "[reduce](hvac_temperature_action) the temperature [to](to_or_by) [twenty](numeric_value) degrees celsius"
-    - "[set](hvac_temperature_action) the thermostat [to](to_or_by) [sixty](numeric_value) degrees fahrenheit"
+    - "[lower](hvac_temperature_action) the temperature [to](to_or_by) [sixty seven](numeric_value) degrees fahrenheit"
+    - "[reduce](hvac_temperature_action) the temperature [to](to_or_by) [twenty six](numeric_value) degrees celsius"
+    - "[set](hvac_temperature_action) the thermostat [to](to_or_by) [forty two](numeric_value) degrees fahrenheit"
 
 
 - regex: hvac_temperature_action
@@ -97,12 +97,12 @@ nlu:
     - lets [decrease](hvac_fan_speed_action) the fans power for a moment
     - i would like [to](to_or_by) [boost](hvac_fan_speed_action) the fan speed [by](to_or_by) [fifteen](numeric_value)
     - hey can you [increase](hvac_fan_speed_action) the fan speed [to](to_or_by) [eighty](numeric_value) percent
-    - please amp [up](hvac_fan_speed_action) the fan speed [to](to_or_by) [ninety](numeric_value) percent
+    - please amp [up](hvac_fan_speed_action) the fan speed [to](to_or_by) [ninety two](numeric_value) percent
     - can you [reduce](hvac_fan_speed_action) the fan speed [to](to_or_by) [half](numeric_value)
-    - i would like [to](to_or_by) [lower](hvac_fan_speed_action) the fan speed [by](to_or_by) [twenty](numeric_value) percent
+    - i would like [to](to_or_by) [lower](hvac_fan_speed_action) the fan speed [by](to_or_by) [twenty one](numeric_value) percent
     - hey its too breezy can you [decrease](hvac_fan_speed_action) the fan speed [to](to_or_by) [forty](numeric_value) percent
     - lets dial [down](hvac_fan_speed_action) the fan speed [to](to_or_by) [five](numeric_value)
-    - please slow [down](hvac_fan_speed_action) the fan speed [to](to_or_by) [thirty](numeric_value) percent
+    - please slow [down](hvac_fan_speed_action) the fan speed [to](to_or_by) [thirty six](numeric_value) percent
 
 
 - regex: hvac_fan_speed_action
@@ -141,18 +141,18 @@ nlu:
     - please [set](volume_control_action) the volume [to](to_or_by) [minimum](numeric_value)
     - i want it a bit [quieter](volume_control_action)
     - could you [lower](volume_control_action) the sound a bit
-    - "[set](volume_control_action) the volume [to](to_or_by) [fifty](numeric_value)"
+    - "[set](volume_control_action) the volume [to](to_or_by) [fifty seven](numeric_value)"
     - "[adjust](volume_control_action) the volume [to](to_or_by) [seventy](numeric_value) percent"
-    - "[increase](volume_control_action) the sound [to](to_or_by) [eighty](numeric_value) percent"
+    - "[increase](volume_control_action) the sound [to](to_or_by) [eighty eight](numeric_value) percent"
     - "[decrease](volume_control_action) the volume [to](to_or_by) [thirty](numeric_value)"
-    - turn the volume [up](volume_control_action) [to](to_or_by) [ninety](numeric_value)
+    - turn the volume [up](volume_control_action) [to](to_or_by) [ninety two](numeric_value)
     - make it a tad [louder](volume_control_action)
     - can you [raise](volume_control_action) the volume up a notch
     - please [set](volume_control_action) the sound [to](to_or_by) [maximum](numeric_value) level
     - "[lower](volume_control_action) the volume a little"
     - could you make it [quieter](volume_control_action) [by](to_or_by) [ten](numeric_value) percent
     - turn the volume [down](volume_control_action) just a touch
-    - i would like [to](to_or_by) [increase](volume_control_action) the sound [to](to_or_by) [fifty](numeric_value) percent
+    - i would like [to](to_or_by) [increase](volume_control_action) the sound [to](to_or_by) [thirty three](numeric_value) percent
     - "[raise](volume_control_action) the volume a bit more"
     - can you please [decrease](volume_control_action) the sound slightly
 
